@@ -1,20 +1,5 @@
-const reveal = document.querySelectorAll(".paper-card, .day-grid article, .chapter, .word, .mini-panels article");
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-      io.unobserve(entry.target);
-    }
-  });
-},{threshold:.12});
-
-reveal.forEach((el, index)=>{
-  el.style.opacity = "0";
-  el.style.transform = "translateY(34px)";
-  el.style.transition = `opacity .65s ease ${Math.min(index*0.025,.25)}s, transform .65s ease ${Math.min(index*0.025,.25)}s`;
-  io.observe(el);
-});
-
-const style = document.createElement("style");
-style.textContent = ".show{opacity:1!important;transform:translateY(0)!important}";
-document.head.appendChild(style);
+document.querySelectorAll('a[href^="#"]').forEach(link=>{link.addEventListener('click',e=>{const t=document.querySelector(link.getAttribute('href'));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});});});
+const items=document.querySelectorAll('.poster-tabs article,.paper-card,.day-grid article,.chapter-section,.word-cloud span');
+const obs=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');obs.unobserve(entry.target);}});},{threshold:.12});
+items.forEach((item,i)=>{item.style.opacity='0';item.style.transform='translateY(28px)';item.style.transition=`opacity .65s ease ${Math.min(i*.025,.22)}s, transform .65s ease ${Math.min(i*.025,.22)}s`;obs.observe(item);});
+const st=document.createElement('style');st.textContent='.is-visible{opacity:1!important;transform:translateY(0)!important}';document.head.appendChild(st);

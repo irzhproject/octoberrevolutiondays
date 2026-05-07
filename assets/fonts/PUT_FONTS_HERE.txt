@@ -1,0 +1,5 @@
+Положите сюда два файла шрифтов с точными названиями:
+- Farabee Black.ttf
+- Gilroy-Semibold_0.ttf
+
+В CSS они уже подключены через @font-face.
