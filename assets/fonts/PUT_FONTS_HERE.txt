@@ -1,5 +1,3 @@
-Положите сюда свои файлы шрифтов:
-FarabeeBlack.ttf
-GilroySemibold.ttf
-
-Файлы шрифтов не включены в архив.
+Fonts included in this build:
+- Farabee Black.ttf
+- Gilroy-Semibold_0.ttf

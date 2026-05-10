@@ -981,3 +981,332 @@ html, body { background: #fbf6ee; }
 .literature-group ol {
   counter-reset: source 6 !important;
 }
+
+
+/* === v13 Биржевые ведомости detailed section === */
+.birzhevye-focus {
+  display: grid;
+  grid-template-columns: 470px 1fr;
+  gap: 76px;
+  align-items: start;
+  background:
+    linear-gradient(90deg, rgba(21,18,15,.045) 0 1px, transparent 1px 100%),
+    linear-gradient(180deg, rgba(200,32,24,.06), rgba(200,32,24,0) 42%),
+    #fbf4e8;
+  background-size: 72px 72px, auto, auto;
+  border-top: 2px solid rgba(21,18,15,.16);
+  border-bottom: 2px solid rgba(21,18,15,.16);
+}
+
+.birzhevye-aside {
+  position: sticky;
+  top: 104px;
+}
+
+.birzhevye-aside h2 {
+  max-width: 430px;
+  font-size: 58px;
+  line-height: .86;
+}
+
+.editor-card {
+  margin-top: 38px;
+  padding: 24px;
+  border: 3px solid var(--black);
+  background: var(--paper);
+  box-shadow: 9px 9px 0 rgba(21,18,15,.14);
+  transform: rotate(-1.2deg);
+}
+
+.editor-card span {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--red);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.editor-card strong {
+  display: block;
+  font-size: 24px;
+  line-height: 1.08;
+}
+
+.editor-card p {
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.birzhevye-text {
+  max-width: 820px;
+  padding: 42px 0 10px;
+  font-size: 20px;
+  line-height: 1.72;
+}
+
+.birzhevye-text p {
+  margin: 0 0 1.28em;
+}
+
+.birzhevye-text .lead {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+
+.birzhevye-text blockquote {
+  margin: 38px 0;
+  padding: 28px 34px;
+  border-left: 8px solid var(--red);
+  background: rgba(255,255,255,.62);
+  box-shadow: 0 0 0 1px rgba(21,18,15,.08);
+}
+
+.birzhevye-text blockquote p {
+  margin: 0;
+  color: var(--red);
+  font-size: 28px;
+  line-height: 1.16;
+  font-weight: 900;
+}
+
+@media (max-width: 980px) {
+  .birzhevye-focus {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .birzhevye-aside {
+    position: static;
+  }
+
+  .birzhevye-aside h2 {
+    max-width: 100%;
+    font-size: 46px;
+  }
+
+  .birzhevye-text {
+    padding-top: 0;
+  }
+
+  .birzhevye-text .lead {
+    font-size: 24px;
+  }
+
+  .birzhevye-text blockquote p {
+    font-size: 23px;
+  }
+}
+
+
+/* === v14 detailed profiles of all five newspapers === */
+.papers-detail-section {
+  display: grid;
+  grid-template-columns: 430px 1fr;
+  gap: 70px;
+  align-items: start;
+  background:
+    linear-gradient(90deg, rgba(200,32,24,.055) 0 160px, transparent 160px),
+    linear-gradient(180deg, #fbf5eb 0%, #f4eadc 100%);
+  border-top: 2px solid rgba(21,18,15,.18);
+  border-bottom: 2px solid rgba(21,18,15,.18);
+}
+
+.papers-detail-aside {
+  position: sticky;
+  top: 104px;
+}
+
+.papers-detail-aside h2 {
+  max-width: 380px;
+  font-size: 64px;
+  line-height: .84;
+}
+
+.papers-detail-aside p {
+  margin: 28px 0 0;
+  max-width: 345px;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.newspaper-profiles {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.newspaper-profile {
+  position: relative;
+  padding: 38px 42px 40px 112px;
+  border: 2px solid rgba(21,18,15,.82);
+  background: rgba(255,255,255,.58);
+  box-shadow: 10px 10px 0 rgba(21,18,15,.09);
+  overflow: hidden;
+}
+
+.newspaper-profile::after {
+  content: "";
+  position: absolute;
+  left: -24px;
+  right: -24px;
+  bottom: -46px;
+  height: 92px;
+  background: rgba(200,32,24,.12);
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+.newspaper-profile:nth-child(even) {
+  background: rgba(247,238,223,.8);
+}
+
+.newspaper-profile h3 {
+  margin: 0 0 24px;
+  max-width: 760px;
+  font-family: Impact, "Arial Black", Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 52px;
+  line-height: .88;
+  letter-spacing: -.045em;
+  text-transform: uppercase;
+}
+
+.newspaper-profile p {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 1.05em;
+  font-size: 18px;
+  line-height: 1.68;
+}
+
+.newspaper-profile .profile-lead {
+  font-size: 25px;
+  line-height: 1.22;
+  font-weight: 850;
+  letter-spacing: -.02em;
+}
+
+.profile-index {
+  position: absolute;
+  left: 30px;
+  top: 40px;
+  color: var(--red);
+  font-family: Impact, "Arial Black", Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 52px;
+  line-height: .8;
+}
+
+.editor-note {
+  position: relative;
+  z-index: 3;
+  margin: 30px 0 28px;
+  padding: 22px 24px;
+  border-left: 8px solid var(--red);
+  background: rgba(21,18,15,.055);
+}
+
+.editor-note span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--red);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.editor-note p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.editor-note strong {
+  font-weight: 950;
+}
+
+.profile-pravda h3,
+.profile-rech h3,
+.profile-birzhevye h3 {
+  color: var(--red);
+}
+
+@media (max-width: 980px) {
+  .papers-detail-section {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .papers-detail-aside {
+    position: static;
+  }
+
+  .papers-detail-aside h2 {
+    max-width: 100%;
+    font-size: 48px;
+  }
+
+  .papers-detail-aside p {
+    max-width: 100%;
+  }
+
+  .newspaper-profile {
+    padding: 34px 28px 34px 28px;
+  }
+
+  .profile-index {
+    position: static;
+    margin-bottom: 18px;
+    font-size: 42px;
+  }
+
+  .newspaper-profile h3 {
+    font-size: 39px;
+  }
+
+  .newspaper-profile .profile-lead {
+    font-size: 22px;
+  }
+}
+
+
+/* === v15 updated newspaper profiles + Farabee headings === */
+.newspaper-profile h3,
+.papers-detail-section .newspaper-profile h3 {
+  font-family: "Farabee", Impact, "Arial Black", Haettenschweiler, "Arial Narrow Bold", sans-serif !important;
+  font-weight: 900 !important;
+}
+
+.papers-detail-section .papers-detail-aside h2 {
+  font-family: "Farabee", Impact, "Arial Black", Haettenschweiler, "Arial Narrow Bold", sans-serif !important;
+  font-weight: 900 !important;
+}
+
+.papers-detail-section .newspaper-profile h3 {
+  font-size: 49px;
+  line-height: .9;
+}
+
+.papers-detail-section .profile-lead {
+  font-size: 24px;
+}
+
+
+/* === v16 ensure Farabee Black loads in the detailed newspapers block === */
+.papers-detail-aside h2,
+.papers-detail-section .newspaper-profile h3,
+.papers-detail-section .profile-index {
+  font-family: "Farabee", Impact, "Arial Black", Haettenschweiler, "Arial Narrow Bold", sans-serif !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+}
+
+.papers-detail-section .newspaper-profile h3 {
+  letter-spacing: -0.03em;
+}
