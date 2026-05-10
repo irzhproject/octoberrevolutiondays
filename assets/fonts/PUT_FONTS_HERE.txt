@@ -1,3 +1,5 @@
-Fonts included in this build:
-- Farabee Black.ttf
-- Gilroy-Semibold_0.ttf
+Оставьте здесь свои локальные файлы шрифтов:
+Farabee Black.ttf
+Gilroy-Semibold_0.ttf
+
+В архив они не включены.

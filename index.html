@@ -5,7 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Пресса в дни Октябрьской революции</title>
   <meta name="description" content="Постерный сайт-лонгрид о том, как пресса описывала смену власти в октябре 1917 года." />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=17" />
+
+  <style id="critical-papers-detail-v17">
+    .papers-detail-section{
+      display:grid !important;
+      grid-template-columns:430px 1fr !important;
+      gap:70px !important;
+      align-items:start !important;
+      background:
+        linear-gradient(90deg, rgba(200,32,24,.055) 0 160px, transparent 160px),
+        linear-gradient(180deg, #fbf5eb 0%, #f4eadc 100%) !important;
+      border-top:2px solid rgba(21,18,15,.18) !important;
+      border-bottom:2px solid rgba(21,18,15,.18) !important;
+    }
+    .papers-detail-aside{position:sticky !important;top:104px !important;}
+    .papers-detail-aside h2{
+      max-width:380px !important;
+      font-size:64px !important;
+      line-height:.84 !important;
+      font-family:"Farabee", Impact, "Arial Black", sans-serif !important;
+      font-weight:900 !important;
+    }
+    .papers-detail-aside p{margin:28px 0 0 !important;max-width:345px !important;font-size:18px !important;line-height:1.55 !important;}
+    .newspaper-profiles{display:flex !important;flex-direction:column !important;gap:26px !important;}
+    .newspaper-profile{
+      position:relative !important;
+      padding:38px 42px 40px 112px !important;
+      border:2px solid rgba(21,18,15,.82) !important;
+      background:rgba(255,255,255,.58) !important;
+      box-shadow:10px 10px 0 rgba(21,18,15,.09) !important;
+      overflow:hidden !important;
+    }
+    .newspaper-profile::after{
+      content:"" !important;
+      position:absolute !important;
+      left:-24px !important;right:-24px !important;bottom:-46px !important;
+      height:92px !important;
+      background:rgba(200,32,24,.12) !important;
+      transform:rotate(-2deg) !important;
+      pointer-events:none !important;
+    }
+    .newspaper-profile:nth-child(even){background:rgba(247,238,223,.8) !important;}
+    .newspaper-profile h3{
+      margin:0 0 24px !important;
+      max-width:760px !important;
+      font-family:"Farabee", Impact, "Arial Black", sans-serif !important;
+      font-size:49px !important;
+      line-height:.9 !important;
+      letter-spacing:-.03em !important;
+      text-transform:uppercase !important;
+      font-weight:900 !important;
+    }
+    .newspaper-profile p{position:relative !important;z-index:2 !important;margin:0 0 1.05em !important;font-size:18px !important;line-height:1.68 !important;}
+    .newspaper-profile .profile-lead{font-size:24px !important;line-height:1.22 !important;font-weight:850 !important;letter-spacing:-.02em !important;}
+    .profile-index{
+      position:absolute !important;
+      left:30px !important;top:40px !important;
+      color:var(--red) !important;
+      font-family:"Farabee", Impact, "Arial Black", sans-serif !important;
+      font-size:52px !important;line-height:.8 !important;font-weight:900 !important;
+    }
+    .editor-note{position:relative !important;z-index:3 !important;margin:30px 0 28px !important;padding:22px 24px !important;border-left:8px solid var(--red) !important;background:rgba(21,18,15,.055) !important;}
+    .editor-note span{display:block !important;margin-bottom:10px !important;color:var(--red) !important;font-family:Arial, Helvetica, sans-serif !important;font-size:10px !important;font-weight:950 !important;letter-spacing:.16em !important;text-transform:uppercase !important;}
+    .editor-note p{margin:0 !important;font-size:18px !important;line-height:1.5 !important;}
+    .editor-note strong{font-weight:950 !important;}
+    .profile-pravda h3,.profile-rech h3,.profile-birzhevye h3{color:var(--red) !important;}
+    @media(max-width:980px){
+      .papers-detail-section{grid-template-columns:1fr !important;gap:36px !important;}
+      .papers-detail-aside{position:static !important;}
+      .papers-detail-aside h2{max-width:100% !important;font-size:48px !important;}
+      .papers-detail-aside p{max-width:100% !important;}
+      .newspaper-profile{padding:34px 28px !important;}
+      .profile-index{position:static !important;margin-bottom:18px !important;font-size:42px !important;}
+      .newspaper-profile h3{font-size:39px !important;}
+      .newspaper-profile .profile-lead{font-size:22px !important;}
+    }
+  </style>
+
 </head>
 <body>
   <div class="site-shell">
